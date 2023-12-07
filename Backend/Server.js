@@ -48,4 +48,4 @@ mongoose.connect(process.env.Mongo_URL)
     .catch((err)=>{
         console.log(err)
     }) 
-  
+  // Backend Algo = Model(shecma) Controller Routes Server 
