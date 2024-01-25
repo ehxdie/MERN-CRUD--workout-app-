@@ -1,0 +1,11 @@
+{
+  "devDependencies": {
+    "vercel": "^33.3.0"
+  },
+  "dependencies": {
+    "aws-sdk": "^2.1544.0",
+    "dotenv": "^16.4.1",
+    "mongodb": "^6.3.0",
+    "morgan": "^1.10.0"
+  }
+}
