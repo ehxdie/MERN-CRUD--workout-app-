@@ -60,7 +60,7 @@ mongoose.connect(process.env.Mongo_URL)
   // Backend Algo = Model(shecma) Controller Routes Server 
 
 // vercel setup
-const baseurl = `${window.location.origin}/api`;
+const baseurl = `${window.location.origin}/api/workouts`;
 
 export default (url, options) => fetch(baseurl + url, options);
 module.exports = app;
