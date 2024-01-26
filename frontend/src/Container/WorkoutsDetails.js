@@ -10,7 +10,7 @@ function WorkoutsDetails(props) {
 
     // This function deletes a workout from the database  
     const Delete = async() => {
-    const response = await fetch('/api/workouts/'+ props.workout._id,{
+    const response = await fetch('https://fitflex-backend.vercel.app/api/workouts'+ props.workout._id,{
       method:"DELETE"
     })
 

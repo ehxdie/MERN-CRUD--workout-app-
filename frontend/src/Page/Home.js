@@ -18,7 +18,7 @@ function Home() {
         const Fetchworkouts = async () => {
             /* To ensure that react is able to fetch the data the localhost/3000 should be removed from the fetch argument
              and added as a proxy in the package.json file*/
-            const response = await fetch('/api/workouts')
+            const response = await fetch('https://fitflex-backend.vercel.app/api/workouts')
             const json = await response.json()
 
             // If no error occurs when fetching the data then set the workouts variable to the json gotten using the dispatch function
