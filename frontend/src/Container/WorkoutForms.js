@@ -23,7 +23,7 @@ function WorkoutForms() {
         const workout = {title,load,reps}
 
         // This sends a post request to the backend api with the workout dummy data as the body
-        const response = await fetch('https://fitflex-backend.vercel.app/api/workouts',{
+        const response = await fetch('http://localhost:8080/workouts',{
             method:'POST',
             body: JSON.stringify(workout),
             headers: {
@@ -35,6 +35,7 @@ function WorkoutForms() {
 
         // Whenever we send a POST request we get a response (Which is basically the data we just sent)    
         const json = await response.json()
+        console.log(json);
         
         // Checking if the POST requests was handled without any error
         if(!response.ok){

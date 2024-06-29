@@ -1,7 +1,7 @@
 import React from 'react'
 import { useWorkoutContext } from '../hooks/useWorkoutsContext'
 
-import formatDistanceToNow from 'date-fns/formatDistanceToNow'
+// import formatDistanceToNow from 'date-fns/formatDistanceToNow'
 
 // Here the workout details are passed as props and the properties in each document displayed
 function WorkoutsDetails(props) {
@@ -10,7 +10,7 @@ function WorkoutsDetails(props) {
 
     // This function deletes a workout from the database  
     const Delete = async() => {
-    const response = await fetch('https://fitflex-backend.vercel.app/api/workouts/'+ props.workout._id,{
+    const response = await fetch('http://localhost:8080/workouts/'+ props.workout._id,{
       method:"DELETE"
     })
 
@@ -27,7 +27,7 @@ function WorkoutsDetails(props) {
        <h4>{props.workout.title}</h4>
        <p><strong>Load(kg): </strong>{props.workout.load}</p>
        <p><strong>reps: </strong>{props.workout.reps}</p>
-       <p>{formatDistanceToNow(new Date(props.workout.createdAt), { addSuffix:true })}</p> 
+       {/* <p>{formatDistanceToNow(new Date(props.workout.createdAt), { addSuffix:true })}</p>  */}
        <span onClick={Delete}>Delete</span>
     </div>
   )
