@@ -9,15 +9,17 @@ function WorkoutsDetails(props) {
     const { dispatch } = useWorkoutContext()
 
     // This function deletes a workout from the database  
-    const Delete = async() => {
-    const response = await fetch('http://localhost:8080/workouts/'+ props.workout._id,{
+    const Delete = async () => {
+      const response = await fetch('http://localhost:8080/workouts/'+ props.workout.id,{
       method:"DELETE"
     })
 
+    // Chill
     const json = await response.json()
 
     if(response.ok){
       dispatch({type:'DELETE_WORKOUT', payload:json})
+      
     }
 
   }

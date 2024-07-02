@@ -24,7 +24,7 @@ export const workoutsReducer = (state,action) => {
                 // In this case we delete a single workout 
             return{
                 // If the workout id is equal to the id passes through the payload, it should be removed from the global state
-                workouts: state.workouts.filter((w)=> w._id !== action.payload._id)
+                workouts: state.workouts.filter((w)=> w.id !== action.payload.id)
 
             }
         default:

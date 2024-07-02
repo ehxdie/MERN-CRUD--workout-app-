@@ -38,7 +38,7 @@ function Home() {
             {/* This is a ternary operator that checks if the workouts variable is empty if not then maps through it 
             and displays the title in each workout document*/}
             {workouts && workouts.map((workout) => (
-                <WorkoutsDetails key={workout._id} workout={workout}/>
+                <WorkoutsDetails key={workout.id} workout={workout}/>
             ))}
 
         </div>
