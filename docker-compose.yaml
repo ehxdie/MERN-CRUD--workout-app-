@@ -1,0 +1,20 @@
+services:
+  backend:  
+    build: ./rust-backend
+    container_name: api_backend
+    image: ehxdie/workout-application-backend:tagname
+    ports:
+      - '8080:8080'
+  frontend:
+    build: ./frontend
+    container_name: client
+    image: ehxdie/workout-application-frontend:tagname
+    ports:
+      - '3000:3000'
+    stdin_open: true
+    tty: true
+    depends_on:
+      - backend
+    volumes:
+      - /frontend/node_modules
+    
