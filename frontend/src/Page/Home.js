@@ -18,7 +18,7 @@ function Home() {
         const Fetchworkouts = async () => {
             /* To ensure that react is able to fetch the data the localhost/3000 should be removed from the fetch argument
              and added as a proxy in the package.json file*/
-            const response = await fetch('http://localhost:8080/workouts')
+            const response = await fetch('https://rust-backend-vave.onrender.com/workouts')
             const json = await response.json()
 
             // If no error occurs when fetching the data then set the workouts variable to the json gotten using the dispatch function

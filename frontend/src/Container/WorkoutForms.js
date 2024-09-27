@@ -23,7 +23,7 @@ function WorkoutForms() {
         const workout = {title,load,reps}
 
         // This sends a post request to the backend api with the workout dummy data as the body
-        const response = await fetch('http://localhost:8080/workouts',{
+        const response = await fetch('https://rust-backend-vave.onrender.com/workouts',{
             method:'POST',
             body: JSON.stringify(workout),
             headers: {

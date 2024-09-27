@@ -10,7 +10,7 @@ function WorkoutsDetails(props) {
 
     // This function deletes a workout from the database  
     const Delete = async () => {
-      const response = await fetch('http://localhost:8080/workouts/'+ props.workout.id,{
+      const response = await fetch('https://rust-backend-vave.onrender.com/workouts/'+ props.workout.id,{
       method:"DELETE"
     })
 
